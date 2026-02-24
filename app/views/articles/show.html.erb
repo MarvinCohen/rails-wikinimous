@@ -1,0 +1,11 @@
+<h1>Show</h1>
+
+<h2><%= @article.title %></h2>
+<p><%= @article.content %></p>
+
+<div class="actions">
+  <%= link_to "Back to list", articles_path %>
+  <%= link_to "Delete", article_path(@article),
+        data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+  <%= link_to "Edit this article", edit_article_path %>
+</div>
